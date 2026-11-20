@@ -8,6 +8,9 @@ import 'react-perfect-scrollbar/dist/css/styles.css'
 // Type Imports
 import type { ChildrenType } from '@core/types'
 
+// Config Imports
+import brandConfig from '@configs/brandConfig'
+
 // Context Imports
 import { IntersectionProvider } from '@/contexts/intersectionContext'
 
@@ -27,8 +30,8 @@ import '@/app/globals.css'
 import '@assets/iconify-icons/generated-icons.css'
 
 export const metadata = {
-  title: 'Materialize - Material Next.js Admin Template',
-  description: 'Materialize - Material Next.js Admin Template'
+  title: `${brandConfig.name} - ${brandConfig.tagline}`,
+  description: brandConfig.description
 }
 
 const Layout = async ({ children }: ChildrenType) => {

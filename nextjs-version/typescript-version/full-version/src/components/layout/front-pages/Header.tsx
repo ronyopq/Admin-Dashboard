@@ -28,6 +28,9 @@ import CustomIconButton from '@core/components/mui/IconButton'
 // Util Imports
 import { frontLayoutClasses } from '@layouts/utils/layoutClasses'
 
+// Config Imports
+import brandConfig from '@configs/brandConfig'
+
 // Styles Imports
 import styles from './styles.module.css'
 
@@ -72,7 +75,7 @@ const Header = ({ mode }: { mode: Mode }) => {
               <CustomIconButton
                 component={Link}
                 variant='contained'
-                href='https://1.envato.market/materialize_admin'
+                href={brandConfig.websiteUrl}
                 color='primary'
                 target='_blank'
               >
@@ -82,12 +85,12 @@ const Header = ({ mode }: { mode: Mode }) => {
               <Button
                 component={Link}
                 variant='contained'
-                href='https://1.envato.market/materialize_admin'
+                href={brandConfig.websiteUrl}
                 startIcon={<i className='ri-shopping-cart-line text-xl' />}
                 className='whitespace-nowrap'
                 target='_blank'
               >
-                Purchase Now
+                Visit Website
               </Button>
             )}
           </div>

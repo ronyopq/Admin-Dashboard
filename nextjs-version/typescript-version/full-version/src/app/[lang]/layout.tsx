@@ -18,6 +18,7 @@ import TranslationWrapper from '@/hocs/TranslationWrapper'
 
 // Config Imports
 import { i18n } from '@configs/i18n'
+import brandConfig from '@configs/brandConfig'
 
 // Util Imports
 import { getSystemMode } from '@core/utils/serverHelpers'
@@ -29,8 +30,8 @@ import '@/app/globals.css'
 import '@assets/iconify-icons/generated-icons.css'
 
 export const metadata = {
-  title: 'Materialize - Material Next.js Admin Template',
-  description: 'Materialize - Material Next.js Admin Template'
+  title: `${brandConfig.name} - ${brandConfig.tagline}`,
+  description: brandConfig.description
 }
 
 const RootLayout = async (props: ChildrenType & { params: Promise<{ lang: string }> }) => {

@@ -16,6 +16,9 @@ import Logo from '@components/layout/shared/Logo'
 // Util Imports
 import { frontLayoutClasses } from '@layouts/utils/layoutClasses'
 
+// Config Imports
+import brandConfig from '@configs/brandConfig'
+
 // Styles Imports
 import styles from './styles.module.css'
 import frontCommonStyles from '@views/front-pages/styles.module.css'
@@ -154,25 +157,18 @@ const Footer = () => {
           )}
         >
           <Typography className='text-white opacity-[0.92]' variant='body2'>
-            <span>{`© ${new Date().getFullYear()}, Made with `}</span>
-            <span>{`❤️`}</span>
-            <span>{` by `}</span>
-            <Link href='https://pixinvent.com/' target='_blank' className='font-medium text-white'>
-              Pixinvent
+            <span>{`© ${new Date().getFullYear()}, `}</span>
+            <Link href={brandConfig.websiteUrl} className='font-medium text-white'>
+              {brandConfig.companyName}
             </Link>
+            <span>{` — All rights reserved.`}</span>
           </Typography>
           <div className='flex gap-1.5 items-center opacity-[0.78]'>
-            <IconButton component={Link} size='small' href='https://github.com/pixinvent' target='_blank'>
-              <i className='ri-github-fill text-white text-lg' />
+            <IconButton component={Link} size='small' href={brandConfig.supportUrl}>
+              <i className='ri-customer-service-2-line text-white text-lg' />
             </IconButton>
-            <IconButton component={Link} size='small' href='https://www.facebook.com/pixinvents/' target='_blank'>
-              <i className='ri-facebook-fill text-white text-lg' />
-            </IconButton>
-            <IconButton component={Link} size='small' href='https://twitter.com/pixinvents' target='_blank'>
-              <i className='ri-twitter-fill text-white text-lg' />
-            </IconButton>
-            <IconButton component={Link} size='small' href='https://www.linkedin.com/company/pixinvent' target='_blank'>
-              <i className='ri-linkedin-fill text-white text-lg' />
+            <IconButton component={Link} size='small' href={`mailto:${brandConfig.supportEmail}`}>
+              <i className='ri-mail-line text-white text-lg' />
             </IconButton>
           </div>
         </div>

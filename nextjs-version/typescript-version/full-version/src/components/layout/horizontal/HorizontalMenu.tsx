@@ -28,6 +28,9 @@ import menuRootStyles from '@core/styles/horizontal/menuRootStyles'
 import verticalMenuItemStyles from '@core/styles/vertical/menuItemStyles'
 import verticalNavigationCustomStyles from '@core/styles/vertical/navigationCustomStyles'
 
+// Config Imports
+import brandConfig from '@configs/brandConfig'
+
 // Menu Data Imports
 // import menuData from '@/data/navigation/horizontalMenuData'
 
@@ -378,7 +381,7 @@ const HorizontalMenu = ({ dictionary }: { dictionary: Awaited<ReturnType<typeof 
             {dictionary['navigation'].menuExamples}
           </MenuItem>
           <MenuItem
-            href='https://pixinvent.ticksy.com'
+            href={brandConfig.supportUrl}
             suffix={<i className='ri-external-link-line text-xl' />}
             target='_blank'
             icon={<i className='ri-lifebuoy-line' />}
@@ -386,7 +389,7 @@ const HorizontalMenu = ({ dictionary }: { dictionary: Awaited<ReturnType<typeof 
             {dictionary['navigation'].raiseSupport}
           </MenuItem>
           <MenuItem
-            href='https://demos.pixinvent.com/materialize-nextjs-admin-template/documentation'
+            href={brandConfig.docsUrl}
             suffix={<i className='ri-external-link-line text-xl' />}
             target='_blank'
             icon={<i className='ri-book-line' />}
@@ -400,7 +403,7 @@ const HorizontalMenu = ({ dictionary }: { dictionary: Awaited<ReturnType<typeof 
             {dictionary['navigation'].itemWithBadge}
           </MenuItem>
           <MenuItem
-            href='https://pixinvent.com'
+            href={brandConfig.websiteUrl}
             target='_blank'
             suffix={<i className='ri-external-link-line text-xl' />}
             icon={<i className='ri-link' />}

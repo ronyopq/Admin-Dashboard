@@ -22,6 +22,9 @@ import type { ToastPosition } from 'react-toastify'
 // Type Imports
 import type { Mode, Skin, Layout, LayoutComponentPosition, LayoutComponentWidth } from '@core/types'
 
+// Config Imports
+import brandConfig from './brandConfig'
+
 type Navbar = {
   type: LayoutComponentPosition
   contentWidth: LayoutComponentWidth
@@ -54,9 +57,9 @@ export type Config = {
 }
 
 const themeConfig: Config = {
-  templateName: 'Materialize',
+  templateName: brandConfig.name,
   homePageUrl: '/dashboards/crm',
-  settingsCookieName: 'materialize-mui-next-demo-1',
+  settingsCookieName: 'app-theme-settings',
   mode: 'system', // 'system', 'light', 'dark'
   skin: 'default', // 'default', 'bordered'
   semiDark: false, // true, false

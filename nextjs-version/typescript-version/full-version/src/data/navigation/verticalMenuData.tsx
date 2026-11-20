@@ -2,6 +2,9 @@
 import type { VerticalMenuDataType } from '@/types/menuTypes'
 import type { getDictionary } from '@/utils/getDictionary'
 
+// Config Imports
+import brandConfig from '@configs/brandConfig'
+
 const verticalMenuData = (dictionary: Awaited<ReturnType<typeof getDictionary>>): VerticalMenuDataType[] => [
   // This is how you will normally render submenu
   {
@@ -539,14 +542,14 @@ const verticalMenuData = (dictionary: Awaited<ReturnType<typeof getDictionary>>)
       {
         label: dictionary['navigation'].raiseSupport,
         icon: 'ri-lifebuoy-line',
-        href: 'https://pixinvent.ticksy.com',
+        href: brandConfig.supportUrl,
         suffix: <i className='ri-external-link-line text-xl' />,
         target: '_blank'
       },
       {
         label: dictionary['navigation'].documentation,
         icon: 'ri-book-line',
-        href: 'https://demos.pixinvent.com/materialize-nextjs-admin-template/documentation',
+        href: brandConfig.docsUrl,
         suffix: <i className='ri-external-link-line text-xl' />,
         target: '_blank'
       },
@@ -563,7 +566,7 @@ const verticalMenuData = (dictionary: Awaited<ReturnType<typeof getDictionary>>)
           },
           {
             label: dictionary['navigation'].externalLink,
-            href: 'https://pixinvent.com',
+            href: brandConfig.websiteUrl,
             target: '_blank',
             suffix: <i className='ri-external-link-line text-xl' />
           },

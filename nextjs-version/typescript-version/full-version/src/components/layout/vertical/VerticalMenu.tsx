@@ -27,6 +27,9 @@ import StyledVerticalNavExpandIcon from '@menu/styles/vertical/StyledVerticalNav
 import menuItemStyles from '@core/styles/vertical/menuItemStyles'
 import menuSectionStyles from '@core/styles/vertical/menuSectionStyles'
 
+// Config Imports
+import brandConfig from '@configs/brandConfig'
+
 // Menu Data Imports
 // import menuData from '@/data/navigation/verticalMenuData'
 
@@ -353,7 +356,7 @@ const VerticalMenu = ({ dictionary, scrollMenu }: Props) => {
             {dictionary['navigation'].menuExamples}
           </MenuItem>
           <MenuItem
-            href='https://pixinvent.ticksy.com'
+            href={brandConfig.supportUrl}
             suffix={<i className='ri-external-link-line text-xl' />}
             target='_blank'
             icon={<i className='ri-lifebuoy-line' />}
@@ -361,7 +364,7 @@ const VerticalMenu = ({ dictionary, scrollMenu }: Props) => {
             {dictionary['navigation'].raiseSupport}
           </MenuItem>
           <MenuItem
-            href='https://demos.pixinvent.com/materialize-nextjs-admin-template/documentation'
+            href={brandConfig.docsUrl}
             suffix={<i className='ri-external-link-line text-xl' />}
             target='_blank'
             icon={<i className='ri-book-line' />}
@@ -373,7 +376,7 @@ const VerticalMenu = ({ dictionary, scrollMenu }: Props) => {
               {dictionary['navigation'].itemWithBadge}
             </MenuItem>
             <MenuItem
-              href='https://pixinvent.com'
+              href={brandConfig.websiteUrl}
               target='_blank'
               suffix={<i className='ri-external-link-line text-xl' />}
             >
